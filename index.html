@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>La Trattoria | Restaurant Italien à Rabat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --main: #c0392b;
+  --dark: #111;
+  --light: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(120deg, rgba(0,0,0,.7), rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-box {
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.45);
+  padding: 60px 70px;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  animation: fadeUp 1.2s ease;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  margin: 15px 0 30px;
+  font-size: 1.2rem;
+  opacity: .9;
+}
+
+.btn {
+  padding: 15px 40px;
+  border-radius: 50px;
+  background: var(--main);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .4s;
+}
+
+.btn:hover {
+  background: #a93226;
+  transform: scale(1.1);
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 100px 8%;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.title h2 {
+  font-size: 3rem;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.15rem;
+  opacity: .85;
+}
+
+/* ===== MENU ===== */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 30px;
+}
+
+.menu-card {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,.1);
+  transition: .4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--main), transparent);
+  opacity: 0;
+  transition: .4s;
+}
+
+.menu-card:hover::before {
+  opacity: .15;
+}
+
+.menu-card:hover {
+  transform: translateY(-15px) scale(1.03);
+}
+
+.menu-card span {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 30px;
+  transition: .6s;
+}
+
+.gallery img:hover {
+  transform: scale(1.15) rotate(1deg);
+}
+
+/* ===== FORM ===== */
+.form-box {
+  max-width: 520px;
+  margin: auto;
+  background: white;
+  padding: 45px;
+  border-radius: 30px;
+  box-shadow: 0 30px 70px rgba(0,0,0,.15);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--main);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--dark);
+  color: #aaa;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-box">
+    <h1>LA TRATTORIA</h1>
+    <p>Restaurant Italien Authentique • Rabat</p>
+    <a href="#reservation" class="btn">Réserver une table</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <div class="title"><h2>Notre Histoire</h2></div>
+  <div class="about">
+    Situé au cœur de Rabat, La Trattoria propose une cuisine italienne
+    raffinée, inspirée des recettes traditionnelles et servie
+    dans une ambiance élégante et chaleureuse.
+  </div>
+</section>
+
+<!-- MENU -->
+<section>
+  <div class="title"><h2>Spécialités</h2></div>
+  <div class="menu">
+    <div class="menu-card"><span>🍕</span>Pizza Margherita</div>
+    <div class="menu-card"><span>🍝</span>Pâtes Carbonara</div>
+    <div class="menu-card"><span>🍲</span>Lasagnes Maison</div>
+    <div class="menu-card"><span>🍰</span>Tiramisu</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <div class="title"><h2>Ambiance</h2></div>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+    <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation">
+  <div class="title"><h2>Réservation</h2></div>
+  <div class="form-box">
+    <input type="text" placeholder="Nom complet">
+    <input type="tel" placeholder="Téléphone">
+    <input type="date">
+    <textarea rows="4" placeholder="Message"></textarea>
+    <a href="#" class="btn">Envoyer</a>
+  </div>
+</section>
+
+<footer>
+  📍 Rabat • 📞 +212 6 XX XX XX XX<br>
+  © 2026 La Trattoria — Démo réalisée par NOVA
+</footer>
+
+</body>
+</html>
